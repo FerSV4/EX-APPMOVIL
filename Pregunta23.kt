@@ -13,7 +13,7 @@ println("Lista original: $numeros")
 println("Lista ordenada: $numeros")
 }
 */
-
+/*
 fun bublesSort (input: MutableList<Int>): MutableList<Int>{
     var output: MutableList<Int> = ()
 
@@ -33,4 +33,23 @@ fun main(){
     // llama 
     val numero_sort: MutableList<Int> = buble sort (numeros)
     print (numero_sort)
+}
+*/
+fun bubbleSort(input: MutableList<Int>): MutableList<Int> {
+    for (i in 0 until input.size - 1) {
+        for (j in 0 until input.size - i - 1) {
+            if (input[j] > input[j + 1]) {
+                val extra = input[j + 1]
+                input[j + 1] = input[j]
+                input[j] = extra
+            }
+        }
+    }
+    return input
+}
+
+fun main() {
+    val numeros = mutableListOf(5, 3, 8, 4, 2)
+    val NumeroOrdenado = bubbleSort(numeros)
+    println(NumeroOrdenado)
 }
