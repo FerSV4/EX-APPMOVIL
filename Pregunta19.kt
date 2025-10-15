@@ -4,7 +4,19 @@ String y retorne true si es un palíndromo (se lee igual al derecho y al revés)
 no lo es. Ejemplo: "ana" → true, "hola" → false.
  */
 
+/*
 esPalindromo(Palabra : String) : Boolean {
     val palabraformateada = Palabra.lowercase()
     return PalabraFormateada.Reversed()
+}
+*/
+
+fun esPalindromo(palabra: String): Boolean {
+    val palabraFormateada = palabra.lowercase()
+    return palabraFormateada == palabraFormateada.reversed()
+}
+
+fun main() {
+    println(esPalindromo("ana")) //resulta true
+    println(esPalindromo("kotlin"))  //resulta false
 }
