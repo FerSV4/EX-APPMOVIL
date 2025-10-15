@@ -17,3 +17,22 @@ fun classifyIntegers ( items : List <Any>) : List <Int> {
  */
 
 // No se realizo el ejercicio
+
+//Clasificador de enteros
+fun classifyIntegers(items: List<Any>): List<Int> {
+    val numeros = mutableListOf<Int>()
+
+    for (item in items) {
+        if (item is Int) {
+            numeros.add(item)
+        }
+    }
+
+    return numeros
+}
+
+fun main() {
+    val cosas = listOf(1, "hola", 3.14, 42, true, 7, "mundo")
+    val enteros = classifyIntegers(cosas)
+    println(enteros) // La salida es: [1, 42, 7]
+}
