@@ -15,3 +15,5 @@ fun classifyIntegers ( items : List <Any>) : List <Int> {
 // retorna tu resultado
 }
  */
+
+// No se realizo el ejercicio
